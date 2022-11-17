@@ -1,13 +1,10 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import RequirementsTable from '../components/RequirementsTable'
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import { Box, TextField } from '@mui/material';
 
 const RequirementsResultsPage = () => {
   return (
-    <div>
-      <Navbar />
+    <>
       <Box
         component="form"
         sx={{
@@ -19,7 +16,7 @@ const RequirementsResultsPage = () => {
         <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       </Box>
       <RequirementsTable />
-    </div>
+    </>
   )
 }
 
