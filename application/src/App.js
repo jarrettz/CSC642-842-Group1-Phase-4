@@ -5,6 +5,7 @@ import RequirementsUniversityPage from "./pages/RequirementsUniversityPage";
 import RequirementsDegreePage from "./pages/RequirementsDegreePage";
 import RequirementsResultsPage from "./pages/RequirementsResultsPage";
 import TestPage from "./pages/TestPage";
+import ForgotPassword from "./pages/ForgotPassword";
 
 
 const theme = createTheme({
@@ -27,6 +28,7 @@ function App() {
           <Route path='/requirements/university' element={<RequirementsUniversityPage/>} />
           <Route path='/requirements/degree' element={<RequirementsDegreePage/>} />
           <Route path='/requirements/results' element={<RequirementsResultsPage/>} />
+          <Route path='/pages/ForgotPassword' element={<ForgotPassword/>} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
