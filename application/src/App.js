@@ -4,8 +4,8 @@ import HomePage from "./pages/HomePage";
 import RequirementsUniversityPage from "./pages/RequirementsUniversityPage";
 import RequirementsDegreePage from "./pages/RequirementsDegreePage";
 import RequirementsResultsPage from "./pages/RequirementsResultsPage";
+import RegistrationPages from "./pages/RegistrationPages";
 import TeacherRanking from "./pages/TeacherRanking";
-
 
 const theme = createTheme({
   palette: {
@@ -23,10 +23,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<TeacherRanking/>} />
+          <Route path='/professors' element={<TeacherRanking/>} />
           <Route path='/requirements/university' element={<RequirementsUniversityPage/>} />
           <Route path='/requirements/degree' element={<RequirementsDegreePage/>} />
           <Route path='/requirements/results' element={<RequirementsResultsPage/>} />
+          <Route path='/registration' element={<RegistrationPages/>} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
