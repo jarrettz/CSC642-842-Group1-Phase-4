@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import RequirementsUniversityPage from "./pages/RequirementsUniversityPage";
 import RequirementsDegreePage from "./pages/RequirementsDegreePage";
 import RequirementsResultsPage from "./pages/RequirementsResultsPage";
+import ForgotPassword from "./pages/ForgotPassword";
 import RoadmapOptionsPage from "./pages/RoadmapOptionsPage";
 import RoadmapResultsPage from "./pages/RoadmapResultsPage";
 import UniversityPage from "./pages/UniversityPage";
@@ -32,6 +33,7 @@ function App() {
           <Route path='/requirements/university' element={<RequirementsUniversityPage/>} />
           <Route path='/requirements/degree' element={<RequirementsDegreePage/>} />
           <Route path='/requirements/results' element={<RequirementsResultsPage/>} />
+          <Route path='/pages/ForgotPassword' element={<ForgotPassword/>} />
           <Route path='/university' element={<UniversityPage/>} />
           <Route path='/professors' element={<TeacherRanking/>} />
           <Route path='/registration' element={<RegistrationPages/>} />
