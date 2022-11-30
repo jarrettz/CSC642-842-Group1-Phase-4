@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import RequirementsUniversityPage from "./pages/RequirementsUniversityPage";
 import RequirementsDegreePage from "./pages/RequirementsDegreePage";
 import RequirementsResultsPage from "./pages/RequirementsResultsPage";
-import TestPage from "./pages/TestPage";
+import TeacherRanking from "./pages/TeacherRanking";
 
 
 const theme = createTheme({
@@ -23,7 +23,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<TestPage/>} />
+          <Route path='/' element={<TeacherRanking/>} />
           <Route path='/requirements/university' element={<RequirementsUniversityPage/>} />
           <Route path='/requirements/degree' element={<RequirementsDegreePage/>} />
           <Route path='/requirements/results' element={<RequirementsResultsPage/>} />
