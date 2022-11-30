@@ -7,19 +7,19 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function createData(course, description, units) {
-  return { course, description, units };
+function createData(course, units) {
+  return { course, units };
 }
 
 const rows = [
-  createData('CSC210', "Description", 3,),
-  createData('CSC220', "Description", 3,),
-  createData('CSC340', "Description", 3,),
-  createData('CSC413', "Description", 3,),
-  createData('CSC648', "Description", 3,),
+  createData('CSC210', 3,),
+  createData('CSC211', 1,),
+  createData('ENG114', 3,),
+  createData('MATH226', 4,),
+  createData('GE Area A', 3,),
 ];
 
-export default function RequirementsTable() {
+export default function RoadmapTable() {
   return (
     <TableContainer component={Paper}
       style={{
@@ -32,7 +32,6 @@ export default function RequirementsTable() {
         <TableHead>
           <TableRow>
             <TableCell>Course</TableCell>
-            <TableCell align="right">Description</TableCell>
             <TableCell align="right">Units</TableCell>      
           </TableRow>
         </TableHead>
@@ -45,7 +44,6 @@ export default function RequirementsTable() {
               <TableCell component="th" scope="row">
                 {row.course}
               </TableCell>
-              <TableCell align="right">{row.description}</TableCell>
               <TableCell align="right">{row.units}</TableCell>
             </TableRow>
           ))}
