@@ -31,8 +31,8 @@ const TeacherRanking = () => {
       }
       
     } />
-<p style={{display: 'flex', alignItems:'center',justifyContent:'center',color:'red',fontWeight: 'bold' }}>Search for Last Name, First Name, School Name</p>
-<Grid container spacing={24} >
+<p style={{display: 'flex', alignItems:'center',justifyContent:'center',color:'red',fontWeight: 'bold'}}>Search for Last Name, First Name, School Name</p>
+<Grid container spacing={24}>
   <Grid item md={3}>
   <div> <TeacherCard /> </div>   
   </Grid>

@@ -128,6 +128,11 @@ function Navbar() {
               <MenuItem key="Login" onClick={handleCloseUserMenu}>
                 <Typography textAlign="center">Login</Typography>
               </MenuItem>
+              <Link to='/forgot-password'>
+                <MenuItem key="Forgot Password" onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Forgot Password</Typography>
+                </MenuItem>
+              </Link>
             </Menu>
           </Box>
         </Toolbar>

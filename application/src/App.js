@@ -33,7 +33,7 @@ function App() {
           <Route path='/requirements/university' element={<RequirementsUniversityPage/>} />
           <Route path='/requirements/degree' element={<RequirementsDegreePage/>} />
           <Route path='/requirements/results' element={<RequirementsResultsPage/>} />
-          <Route path='/pages/ForgotPassword' element={<ForgotPassword/>} />
+          <Route path='/forgot-password' element={<ForgotPassword/>} />
           <Route path='/university' element={<UniversityPage/>} />
           <Route path='/professors' element={<TeacherRanking/>} />
           <Route path='/registration' element={<RegistrationPages/>} />
