@@ -4,11 +4,12 @@ import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search'
 import {Grid} from '@mui/material'
 import TeacherCard from "./TeacherCards";
-import { border } from "@mui/system";
+import Navbar from '../components/Navbar'
+
 const TeacherRanking = () => {
   return (
     <div>
-
+      <Navbar />
       <TextField
       id="search_bar"
       type="search"
