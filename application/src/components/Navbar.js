@@ -120,9 +120,11 @@ function Navbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              <MenuItem key="Registration" onClick={handleCloseUserMenu}>
-                <Typography textAlign="center">Registration</Typography>
-              </MenuItem>
+              <Link to='/registration'>
+                <MenuItem key="Registration" onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Registration</Typography>
+                </MenuItem>
+              </Link>
               <MenuItem key="Login" onClick={handleCloseUserMenu}>
                 <Typography textAlign="center">Login</Typography>
               </MenuItem>

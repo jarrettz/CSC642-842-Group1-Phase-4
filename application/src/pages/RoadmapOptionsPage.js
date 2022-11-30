@@ -1,9 +1,19 @@
-import { Button, Checkbox, FormControlLabel, FormGroup, TextField } from '@mui/material'
-import React from 'react'
+import { Button, Checkbox, FormControl, FormControlLabel, FormGroup, InputLabel, MenuItem, Select, TextField } from '@mui/material'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
 const RoadmapOptionsPage = () => {
+  const [university, setUniversity] = useState('');
+  const [degree, setDegree] = useState('');
+
+  const handleUniversitySelect = (event) => {
+    setUniversity(event.target.value);
+  };
+
+  const handleDegreeSelect = (event) => {
+    setDegree(event.target.value);
+  };
   return (
     <div>
       <Navbar/>
@@ -22,22 +32,68 @@ const RoadmapOptionsPage = () => {
         >
           University Roadmap
         </h1>
-        <TextField
-          id="outlined-basic" 
-          label="University" 
-          variant="outlined" 
-          style={{
-            marginBottom: '50px'
-          }}
-        />
-        <TextField 
-          id="outlined-basic" 
-          label="Major" 
-          variant="outlined" 
-          style={{
-            marginBottom: '50px'
-          }}
-        />
+        <FormControl 
+          fullWidth 
+            style={{
+              marginBottom: '50px'
+            }}
+        >
+          <InputLabel id="university-select-label">University</InputLabel>
+          <Select
+            labelId="university-select-label"
+            id="university-select"
+            value={university}
+            label="University"
+            onChange={handleUniversitySelect}
+          >
+            <MenuItem
+              value={"SFSU"}
+            >
+              SFSU
+            </MenuItem>
+            <MenuItem 
+              value={"SJSU"}
+            >
+              SJSU
+            </MenuItem>
+            <MenuItem 
+              value={"CSUEB"}
+            >
+              CSUEB
+            </MenuItem>
+          </Select>
+        </FormControl>
+        <FormControl 
+          fullWidth 
+            style={{
+              marginBottom: '50px'
+            }}
+        >
+          <InputLabel id="degree-select-label">Degree</InputLabel>
+          <Select
+            labelId="degree-select-label"
+            id="degree-select"
+            value={degree}
+            label="Degree"
+            onChange={handleDegreeSelect}
+          >
+            <MenuItem 
+              value={"Computer Science"}
+            >
+              Computer Science
+            </MenuItem>
+            <MenuItem 
+              value={"Computer Engineering"}
+            >
+              Computer Engineering
+            </MenuItem>
+            <MenuItem 
+              value={"Physics"}
+            >
+              Physics
+            </MenuItem>
+          </Select>
+        </FormControl>
         <FormGroup>
           <FormControlLabel 
             control={<Checkbox />} 
