@@ -4,8 +4,9 @@ import HomePage from "./pages/HomePage";
 import RequirementsUniversityPage from "./pages/RequirementsUniversityPage";
 import RequirementsDegreePage from "./pages/RequirementsDegreePage";
 import RequirementsResultsPage from "./pages/RequirementsResultsPage";
-import TestPage from "./pages/TestPage";
-
+import RoadmapOptionsPage from "./pages/RoadmapOptionsPage";
+import RoadmapResultsPage from "./pages/RoadmapResultsPage";
+import UniversityPage from "./pages/UniversityPage";
 
 const theme = createTheme({
   palette: {
@@ -23,10 +24,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<TestPage/>} />
+          <Route path='/' element={<HomePage/>} />
+          <Route path='/roadmap/options' element={<RoadmapOptionsPage/>} />
+          <Route path='/roadmap/results' element={<RoadmapResultsPage/>} />
           <Route path='/requirements/university' element={<RequirementsUniversityPage/>} />
           <Route path='/requirements/degree' element={<RequirementsDegreePage/>} />
           <Route path='/requirements/results' element={<RequirementsResultsPage/>} />
+          <Route path='/university' element={<UniversityPage/>} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
