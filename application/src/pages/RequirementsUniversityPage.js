@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
-import { Container, FormControl, InputLabel, Link, MenuItem, Select } from '@mui/material';
+import { Container, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { Link } from "react-router-dom";
 
 const RequirementsUniversityPage = () => {
   const [university, setUniversity] = useState('');
@@ -23,11 +24,24 @@ const RequirementsUniversityPage = () => {
             label="University"
             onChange={handleUniversitySelect}
           >
-            <Link href='/requirements/degree/'>
-              <MenuItem value={"SFSU"}>SFSU</MenuItem>
-              <MenuItem value={"SJSU"}>SJSU</MenuItem>
-              <MenuItem value={"CSUEB"}>CSUEB</MenuItem>
-            </Link>
+            <MenuItem 
+              value={"SFSU"}
+              component={Link} to={'/requirements/degree/'}
+            >
+              SFSU
+            </MenuItem>
+            <MenuItem 
+              value={"SJSU"}
+              component={Link} to={'/requirements/degree/'}
+            >
+              SJSU
+            </MenuItem>
+            <MenuItem 
+              value={"CSUEB"}
+              component={Link} to={'/requirements/degree/'}
+            >
+              CSUEB
+            </MenuItem>
           </Select>
         </FormControl>
       </Container>
