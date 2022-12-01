@@ -10,6 +10,7 @@ import RoadmapResultsPage from "./pages/RoadmapResultsPage";
 import UniversityPage from "./pages/UniversityPage";
 import RegistrationPages from "./pages/RegistrationPages";
 import TeacherRanking from "./pages/TeacherRanking";
+import SignIn from "./pages/SignIn";
 
 const theme = createTheme({
   palette: {
@@ -37,6 +38,7 @@ function App() {
           <Route path='/university' element={<UniversityPage/>} />
           <Route path='/professors' element={<TeacherRanking/>} />
           <Route path='/registration' element={<RegistrationPages/>} />
+          <Route path='/signin' element={<SignIn/>} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

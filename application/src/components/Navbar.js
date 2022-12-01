@@ -125,9 +125,11 @@ function Navbar() {
                   <Typography textAlign="center">Registration</Typography>
                 </MenuItem>
               </Link>
-              <MenuItem key="Login" onClick={handleCloseUserMenu}>
-                <Typography textAlign="center">Login</Typography>
-              </MenuItem>
+              <Link to='/signin'>
+                <MenuItem key="Sign In" onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Sign In</Typography>
+                </MenuItem>
+              </Link>
               <Link to='/forgot-password'>
                 <MenuItem key="Forgot Password" onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">Forgot Password</Typography>
